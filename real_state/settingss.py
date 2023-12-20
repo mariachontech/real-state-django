@@ -17,6 +17,9 @@ SECRET_KEY = env("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env("DEBUG")
 
+print(env("SECRET_KEY"))
+print(env("DEBUG"))
+
 ALLOWED_HOSTS = env("ALLOWED_HOSTS").split(" ")
 
 
