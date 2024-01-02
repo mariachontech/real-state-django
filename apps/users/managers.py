@@ -1,4 +1,3 @@
-from typing import Any
 from django.contrib.auth.base_user import BaseUserManager
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
@@ -29,7 +28,7 @@ class CustomUserManager(BaseUserManager):
             self.email_validator(email)
         else:
             raise ValueError(_('Base User account: an email address must be provided'))
-        
+
         user = self.model(
             username=username,
             first_name=first_name,
